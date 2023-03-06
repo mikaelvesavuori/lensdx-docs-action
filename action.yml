@@ -1,0 +1,21 @@
+name: 'LensDX Docs Action'
+description: 'Publish docs and standards to LensDX'
+branding:
+  icon: 'bar-chart-2'
+  color: 'black'
+inputs:
+  api-key:
+    description: 'LensDX API token'
+    required: true
+    default: ''
+  product:
+    description: '(Optional) Product name, will default to repository name'
+    required: false
+    default: ${{ github.event.repository.name }}
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/catalog.sh ${{ inputs.api-key }}
+      shell: bash
+    - run: ${{ github.action_path }}/standards.sh ${{ inputs.api-key }} ${{ inputs.product }}
+      shell: bash

@@ -9,7 +9,7 @@ set -o pipefail
 #echo "Product name is $REPO_NAME"
 
 REPO_NAME="$GITHUB_REPOSITORY"
-API_KEY="S_a@rI8OtHL2R3vawir0triVecOx7jak"
+API_KEY="w6oZ4tLzaNLCOrl+u-0thuyazLCabR1j"
 ENDPOINT="https://catalogist.lensdx.app"
 
 if [[ $API_KEY ]] && [[ $ENDPOINT ]] && [[ -f "manifest.json" ]]; then

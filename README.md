@@ -6,11 +6,7 @@ This Action allows you to push a service catalog entry and standards (checks) re
 
 ### Inputs
 
-There are two optional inputs you can provide: `api-key` and `product-name`.
-
-The `api-key` will resort to a working alpha key, so avoid setting this while in alpha.
-
-The `product-name` is taken from the repository and does not need to be explicitly set.
+There are no inputs available nor needed.
 
 ### Updating the service catalog
 

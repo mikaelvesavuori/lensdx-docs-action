@@ -10,7 +10,7 @@ set -o pipefail
 
 REPO_NAME="$GITHUB_REPOSITORY"
 API_KEY="S_a@rI8OtHL2R3vawir0triVecOx7jak"
-ENDPOINT="https://catalogist.lensdx.app/"
+ENDPOINT="https://catalogist.lensdx.app/record"
 
 if [[ $API_KEY ]] && [[ $ENDPOINT ]] && [[ -f "manifest.json" ]]; then
   echo "Uploading service metadata to Catalogist service..."

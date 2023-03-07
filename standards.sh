@@ -10,7 +10,7 @@ set -o pipefail
 #echo "Repo name is $GITHUB_REPOSITORY"
 
 REPO_NAME="$GITHUB_REPOSITORY"
-ENDPOINT="https://standards.lensdx.app/"
+ENDPOINT="https://standards.lensdx.app/standards?$REPO_NAME"
 
 if [[ $REPO_NAME ]] && [[ $ENDPOINT ]]; then
   if [[ -f "standardlint.json" ]]; then
@@ -23,6 +23,6 @@ if [[ $REPO_NAME ]] && [[ $ENDPOINT ]]; then
     jq -n -c --arg repo $REPO_NAME --argjson st "$RESULTS" '{ repo: $repo, standards: $st }' > standards.json
 
     echo "Uploading standards results to Standards service..."
-    curl -X POST "${ENDPOINT}" -d "@standards.json" -H "Authorization: ${API_KEY}" -H "Content-Type: application/json"
+    curl -X PUT "${ENDPOINT}" -d "@standards.json" -H "Authorization: ${API_KEY}" -H "Content-Type: application/json"
   fi
 fi

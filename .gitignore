@@ -1,6 +1,4 @@
 .env
 node_modules/
 .dccache
-package*.json
-standardlint.json
-standardlint*.json
+*.json

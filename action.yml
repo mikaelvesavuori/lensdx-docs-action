@@ -15,7 +15,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/catalog.sh ${{ inputs.api-key }}
+    - run: ${{ github.action_path }}/catalog.sh ${{ inputs.api-key }} ${{ inputs.product }}
       shell: bash
     - run: ${{ github.action_path }}/standards.sh ${{ inputs.api-key }} ${{ inputs.product }}
       shell: bash

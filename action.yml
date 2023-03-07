@@ -9,7 +9,7 @@ inputs:
     required: false
     default: ''
   product:
-    description: '(Optional) Product name, will default to repository name'
+    description: '(Optional) Repository name, will default to GitHub's repository name'
     required: false
     default: ${{ github.event.repository.name }}
 runs:

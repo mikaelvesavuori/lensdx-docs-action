@@ -32,6 +32,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Push to LensDX
         uses: lensdx/lensdx-docs-action@v0
+        # Optional
         with:
           api-key: your-key-here
           product-name: my-repo

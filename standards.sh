@@ -11,7 +11,8 @@ echo "Product name is $PRODUCT_NAME"
 API_KEY=""
 ENDPOINT="https://standards.lensdx.app/"
 
-if [[ $ENDPOINT ]] && [[ $API_KEY ]]; then
+# [[ $API_KEY ]] &&
+if [[ $ENDPOINT ]]; then
   if [[ -f "standardlint.json" ]]; then
     npm install standardlint
     npx standardlint --output

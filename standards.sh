@@ -22,6 +22,6 @@ if [[ $STANDARDS_ENDPOINT ]] && [[ $STANDARDS_API_KEY ]]; then
     STANDARDS_PAYLOAD="$(jq -n -c --arg repo $PRODUCT_NAME --argjson st "$RESULTS" '{ repo: $repo, standards: $st }')"
 
     echo "Uploading standards results to Standards service..."
-    curl -X POST "${STANDARDS_ENDPOINT}" -d "STANDARDS_PAYLOAD" -H "Authorization: ${STANDARDS_API_KEY}" # https://eo5aftcjmcd5p59.m.pipedream.net, @manifest.json
+    curl -X POST "${STANDARDS_ENDPOINT}" -d "STANDARDS_PAYLOAD" -H "Authorization: ${STANDARDS_API_KEY}" -H "Content-Type: application/json"
   fi
 fi

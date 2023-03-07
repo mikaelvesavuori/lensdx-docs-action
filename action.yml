@@ -6,7 +6,7 @@ branding:
 inputs:
   api-key:
     description: 'LensDX API token'
-    required: true
+    required: false
     default: ''
   product:
     description: '(Optional) Product name, will default to repository name'

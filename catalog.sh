@@ -2,14 +2,10 @@
 
 set -o pipefail
 
-#API_KEY="${1}"
-#if [[ $API_KEY ]]; then echo "API_KEY is set"; else echo "API_KEY is not set"; fi
-
-#REPO_NAME="${2}"
-#echo "Product name is $REPO_NAME"
+API_KEY="${1}"
+if [[ $API_KEY ]]; then echo "API key is set"; else echo "API key is not set"; fi
 
 REPO_NAME="$GITHUB_REPOSITORY"
-API_KEY="w6oZ4tLzaNLCOrl+u-0thuyazLCabR1j"
 ENDPOINT="https://catalogist.lensdx.app"
 
 if [[ $API_KEY ]] && [[ $ENDPOINT ]] && [[ -f "manifest.json" ]]; then

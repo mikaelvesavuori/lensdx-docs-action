@@ -3,10 +3,14 @@ description: 'Publish docs and standards to LensDX'
 branding:
   icon: 'bar-chart-2'
   color: 'black'
+inputs:
+  api-key: 1
+    description: 'LensDX API key'
+    required: true
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/catalog.sh
+    - run: ${{ github.action_path }}/catalog.sh ${{ inputs.api-key }}
       shell: bash
     - run: ${{ github.action_path }}/standards.sh
       shell: bash

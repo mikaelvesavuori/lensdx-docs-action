@@ -2,15 +2,9 @@
 
 set -o pipefail
 
-#REPO_NAME="${1}"
-#echo "Product name is $REPO_NAME"
-#echo "Repo name is $GITHUB_REPOSITORY"
-
 REPO_NAME="$GITHUB_REPOSITORY"
-ENDPOINT="https://standards.lensdx.app"
 
-REPO="$GITHUB_REPOSITORY"
-echo "Internal value for GH repo is $REPO"
+ENDPOINT="https://standards.lensdx.app"
 
 if [[ $REPO_NAME ]] && [[ $ENDPOINT ]]; then
   if [[ -f "standardlint.json" ]]; then
